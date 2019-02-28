@@ -1,0 +1,33 @@
+<!--<body>
+	<form action="/sell" method="POST">
+		Item:<input type="string" name="name"><br>
+		Price:<input type="float" name = "price"><br>
+		Image:<input type="string" name = "image"><br>
+		Description:<input type="text" name="body"><br>
+		<input type="submit" name=""><br>
+	</form>
+</body>
+-->
+
+<body>
+ </br>
+  </br>
+<form  id = "article" action="/sell" method="POST" >
+    <div class="form-group">
+    <label for=item>Item Name:</label>
+    <input type="string" class="form-control" id="item">
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="float" class="form-control" id="price">
+  </div>
+  <div class="form-group">
+    <label for="description">Brief Description:</label>
+    <textarea type="text" class="form-control" id="description">
+    </textarea>
+  </div>
+
+  <a class="btn btn-lg btn-link" href="/upload" role="button">Upload Pictures</a>
+
+  <button type="submit" class="btn btn-default">Submit</button>  </form>
+  </body>

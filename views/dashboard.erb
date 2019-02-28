@@ -1,0 +1,32 @@
+
+<!--Hello <%= current_user.email %>-->
+
+<div class="container">
+	<h1>Dashboard for <%= current_user.email %></h1>
+
+</div>
+
+<div class="container">
+        <% current_user.items.each do |item| %>
+            <div class="panel panel-primary">
+              <div class="panel-heading"><h2><img src="/icon.png" width="40" height="40" class="d-inline-block" alt="">
+                <%= item.name %></h2>
+              </div>
+              <div class="panel-body"><h2><%= item.image %></h2>
+              <p>$<%= item.price %></p>
+              <p><%= item.body %></p>
+              </div>
+            </div>
+        <% end %>
+  </div> 
+
+
+<!--
+ 
+ <div class = "container">
+
+<%= current_user.items.length %>
+ 
+
+  </div>
+-->

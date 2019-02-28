@@ -1,0 +1,69 @@
+
+ <div class="header-nightsky">
+  <nav class="navbar navbar-default navbar-expand-md">
+
+  <img src="/ezmarketlogo.png" width="75" height="75" class="d-inline-block" style="padding-top:5px;border-radius:10px" alt="">
+  <a class="navbar-brand" id="ez" href="/">EzMarket</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-auto">
+        <li class="nav-item active">
+          <a class="nav-link" id = "home" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+
+        <% if current_user %>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <a class="nav-link" href="/login" id = "log">Login</a>
+           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sign_up" id = "log">Sign Up</a>
+          </li> 
+          <li class = "nav-item">
+            <a data-toggle="modal" href="#myModal">About us</a>
+          </li>               
+        <% end %>
+     </ul>
+    </div>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  </div>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">About Us!</h4>
+      </div>
+      <div class="modal-body">
+          <p>Daniela Tamayo.</p>
+          <blockquote>Senior, Computer Science Major and Graphic Design as Minor.</blockquote>
+           <p>Carlos Aguilar.</p>
+          <blockquote>Senior, Computer Science Major</blockquote>
+          <p>Antonio de la Garza.</p>
+          <blockquote>Senior, Computer Engineering Major</blockquote>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>                   
+    </div>
+  </div>
+</div>  
